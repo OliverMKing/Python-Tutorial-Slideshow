@@ -77,9 +77,9 @@
 
         <section>
           <h2>Print and Comments</h2>
-          <pre>
+          <pre class="python">
 			  <code class="hljs" data-trim contenteditable>
-				print('Hello World!')			# This is a comment</code></pre>
+				  print('Hello World!')			# This is a comment</code></pre>
           <p>
             This is how you use the print function in Python <br />
             # are comments in Python
@@ -125,15 +125,15 @@
           </section>
 
           <section>
-            <pre><code class="hljs" data-trim contenteditable>
-				print(1 + 2)						# 3
-				print(5 - 4)						# 1
-				print(6 * 3)						# 18
-				print(9 / 3)						# 3.0
-				print(10 % 3)						# 1
-				print(2**3)						# 8
-				print((10 % 4) * 5)					# 10
-</code></pre>
+            <pre class="python"><code class="hljs" data-trim contenteditable>
+              print(1 + 2)						# 3
+              print(5 - 4)						# 1
+              print(6 * 3)						# 18
+              print(9 / 3)						# 3.0
+              print(10 % 3)						# 1
+              print(2**3)						# 8
+              print((10 % 4) * 5)					# 10
+            </code></pre>
             <p>
               There is an order of operations<br />
               Parenthesis > Exponents > Multiplication / Division > Addition /
@@ -145,18 +145,17 @@
         <section>
           <section>
             <h2>Variables and Types</h2>
-            <pre><code class="hljs" data-trim contenteditable>
-			age = 20				   # Integer
-			exact_age = 20.25		 	   # Float
-			first_name = 'Oliver'		 	   # String
-			last_name = "King"			   # Also a String
-			awesome = True				   # Boolean
-			age = age + 1
-			age += 1
-			age *= 2
-			full_name = first_name + ' ' + last_name   # String concatenation
-		</code></pre>
-
+            <pre class="python"><code class="hljs" data-trim contenteditable>
+              age = 20				   # Integer
+              exact_age = 20.25		 	   # Float
+              first_name = 'Oliver'		 	   # String
+              last_name = "King"			   # Also a String
+              awesome = True				   # Boolean
+              age = age + 1
+              age += 1
+              age *= 2
+              full_name = first_name + ' ' + last_name   # String concatenation
+	        	</code></pre>
             <p>
               These are assignment statements in Python<br />
               Variables are dynamically typed
@@ -174,14 +173,14 @@
 
         <section>
           <h2>Input and Converting Type</h2>
-          <pre><code class="hljs" data-trim contenteditable>
-				name = input()
-				age = input("What's your age?\n")
-				age_as_int = int(age)
-				age_as_string = str(age_as_int)
-				gpa = float(input("What's your GPA? "))
-			</code></pre>
-
+          <pre class="python"><code class="hljs" data-trim contenteditable>
+            name = input()
+            age = input("What's your age?\n")
+            age_as_int = int(age)
+            age_as_float = float(age)
+            age_as_string = str(age_as_int)
+            gpa = float(input("What's your GPA? "))
+          </code></pre>
           <p>Input assumes you are passing in a String<br /></p>
         </section>
 
@@ -195,11 +194,11 @@
           </section>
 
           <section data-background="#6a1520">
-            <pre><code class="hljs" data-trim contenteditable>
-				radius = float(input("Enter the radius: "))
-				volume = (4/3) * (3.14) * (radius ** 3)
-				print('The volume of the sphere with that radius is', volume)
-			</code></pre>
+            <pre class="python"><code class="hljs" data-trim contenteditable>
+              radius = float(input("Enter the radius: "))
+              volume = (4/3) * (3.14) * (radius ** 3)
+              print('The volume of the sphere with that radius is', volume)
+			      </code></pre>
           </section>
         </section>
 
@@ -238,15 +237,15 @@
             </table>
           </section>
           <section>
-            <pre><code class="hljs" data-trim contenteditable>
-				print(1 == 1)						# True
-				print("a" == "a")					# True
-				print(1 != 1)						# False
-				print(5 > 6)						# False
-				print(5 < 6)						# True
-				print(5 >= 5)						# True
-				print(5 <= 4)						# False
-					</code></pre>
+            <pre class="python"><code class="hljs" data-trim contenteditable>
+              print(1 == 1)						# True
+              print("a" == "a")					# True
+              print(1 != 1)						# False
+              print(5 > 6)						# False
+              print(5 < 6)						# True
+              print(5 >= 5)						# True
+              print(5 <= 4)						# False
+					  </code></pre>
           </section>
         </section>
 
@@ -273,35 +272,35 @@
             </table>
           </section>
           <section>
-            <pre><code class="hljs" data-trim contenteditable>
-				print(True and True)					# True
-				print(True and False)					# False
-				print(False or True)					# True
-				print(False or False)					# False
-				print(not (True and False))				# True
-				print(not (5 < 6))					# False
-			</code></pre>
+            <pre class="python"><code class="hljs" data-trim contenteditable>
+              print(True and True)					# True
+              print(True and False)					# False
+              print(False or True)					# True
+              print(False or False)					# False
+              print(not (True and False))				# True
+              print(not (5 < 6))					# False
+			      </code></pre>
           </section>
         </section>
 
         <section>
-          <h2>Function Definition and Call</h2>
-          <pre><code class="hljs" data-trim contenteditable>
-				def print_lyrics():
-					print("I'm a lumberjack, and I'm okay.")
-					print("I sleep all night and I work all day.")
+          <h2>Function Definitions and Calls</h2>
+          <pre class="python"><code class="hljs" data-trim contenteditable>
+            def print_lyrics():
+              print("I'm a lumberjack, and I'm okay.")
+              print("I sleep all night and I work all day.")
 
-				def repeat(lyric1, lyric2):
-					print(lyric1)
-					print(lyric2)
-					print(lyric1)
-					print(lyric2)
-					print_lyrics()
+            def repeat(lyric1, lyric2):
+              print(lyric1)
+              print(lyric2)
+              print(lyric1)
+              print(lyric2)
+              print_lyrics()
 
-				# Function calls
-				print_lyrics()
-				repeat('Wooooooooo', 'Ahhhhhhhh')
-			</code></pre>
+            # Function calls
+            print_lyrics()
+            repeat('Wooooooooo', 'Ahhhhhhhh')
+			    </code></pre>
           <p>Indents are what seperates the header from the body</p>
         </section>
 
@@ -320,34 +319,100 @@
             </p>
           </section>
           <section data-background="#6a1520">
-            <pre><code class="hljs" data-trim contenteditable>
-				def draw_line():
-					print("+ - - - - + - - - - +")
-		
-				def draw_connectors():
-					print("|         |         |")
-		
-				def draw_grid():
-					draw_line()
-					draw_connectors()
-					draw_line()
-					draw_connectors()
-					draw_line()
+            <pre class="python"><code class="hljs" data-trim contenteditable>
+            def draw_line():
+              print("+ - - - - + - - - - +")
+        
+            def draw_connectors():
+              print("|         |         |")
+        
+            def draw_grid():
+              draw_line()
+              draw_connectors()
+              draw_line()
+              draw_connectors()
+              draw_line()
 
-				draw_grid()
-				</code></pre>
+            draw_grid()
+				    </code></pre>
           </section>
         </section>
 
         <section>
-          <h2>Import</h2>
-          <pre><code class="hljs" data-trim contenteditable>
-			import math
+          <h2>Imports</h2>
+          <pre class="python"><code class="hljs" data-trim contenteditable>
+          import math
+          from random import randint
 
-			log = 10 * math.log10(40)
-			sine = math.sin(.556)
-			real_pi = math.pi
-		</code></pre>
+          log = 10 * math.log10(40)
+          sine = math.sin(.556)
+          real_pi = math.pi
+          random = randint(0, 9)
+		      </code></pre>
+        </section>
+
+        <section>
+          <h2>Conditionals</h2>
+          <pre class="python"><code class="hljs" data-trim contenteditable>
+            x = 10
+
+            if x < 10:
+              print('Less than 10')
+            elif x > 10:
+              print('Greater than 10')
+            else:
+              print('Equal to 10')
+          </code></pre>
+          <p>
+            You can have as many elif statements as you want in a chained
+            conditional
+          </p>
+        </section>
+
+        <section>
+          <h2>While Loops</h2>
+          <pre class="python"><code class="hljs" data-trim contenteditable>
+            while True:
+              line = input('> ')
+              if line == 'exit':
+                print('Exiting terminal')
+                break
+              elif line == 'ls':
+                print('You have no files here')
+              else:
+                print('Command not recognized')
+          </code></pre>
+          <p>
+            The break statement jumps out of the loop
+          </p>
+        </section>
+
+        <section>
+          <section data-background="#6a1520" data-background-transition="zoom">
+            <h2>
+              Challenge: Print the numbers from 1 to 100
+            </h2>
+            <p>
+              For multiples of three print “Fizz” instead of the number and for
+              multiples of five print “Buzz”. For multiples of both three and
+              five print “FizzBuzz".
+            </p>
+          </section>
+          <section data-background="#6a1520">
+            <pre class="python"><code class="hljs" data-trim contenteditable>
+            count = 0
+            while count <= 100:
+              if count % 15 == 0:
+                print('FizzBuzz')
+              elif count % 5 == 0:
+                print('Buzz')
+              elif count % 3 == 0:
+                print('Fizz')
+              else:
+                print(count)
+              count += 1
+				    </code></pre>
+          </section>
         </section>
       </div>
     </div>
