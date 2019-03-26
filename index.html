@@ -414,6 +414,179 @@
 				    </code></pre>
           </section>
         </section>
+
+        <section>
+          <h2>For Loops</h2>
+          <pre class="python"><code class="hljs" data-trim contenteditable>
+          for i in range(10):
+            print(i)
+          
+          for i in range(2, 5):
+            print(i)
+
+          for i in range(0, 10, 2):
+            print(i)
+
+          print(range(10))
+          </code></pre>
+          <p>
+            For loops behave differently from Java<br />
+            range(start, stop, step)
+          </p>
+        </section>
+
+        <section>
+          <h2>Lists</h2>
+          <pre class="python"><code class="hljs" data-trim contenteditable>
+          colors = ['Blue', 'Red', 'White', 1, True]
+          print(colors[2])
+          colors[2] = 'Green'
+          print(colors)
+          del colors[2]
+          print(colors)
+          colors.append('Black')
+          print(colors)
+          colors.insert(1, 'Brown')
+          print(colors)
+          numbers = list()
+          numbers.append(1)
+          print(numbers)
+          print(len(colors))
+          </code></pre>
+          <p>len() prints the length</p>
+        </section>
+
+        <section>
+          <h2>For Loops (Again)</h2>
+          <pre class="python"><code class="hljs" data-trim contenteditable>
+          numbers = [1, 5, 7, -100]
+          for i in numbers:
+            print(i)
+
+          things = input().split()
+          for thing in things:
+            print(thing)
+          </code></pre>
+          <p>
+            split() by default seperates by spaces
+          </p>
+        </section>
+
+        <section>
+          <section data-background="#6a1520" data-background-transition="zoom">
+            <h2>
+              Challenge: Input a variable (unspecified) amount of unique numbers
+            </h2>
+            <p>
+              Check if any of the numbers are multiples of eachother. If two
+              numbers are multiples output both numbers.<br />
+            </p>
+            <h4>
+              Bonus: Allow for duplicate numbers
+            </h4>
+          </section>
+          <section data-background="#6a1520">
+            <pre class="python"><code class="hljs" data-trim contenteditable>
+              numbers_str = input('Please input your numbers: ').split()
+
+              # Gets input as int
+              numbers_int = list()
+              for i in numbers_str:
+                numbers_int.append(int(i))
+              
+              for x in numbers_int:
+                for y in numbers_int:
+                  if x == y:
+                    break
+                  elif (x % y == 0) or (y % x == 0):
+                    print(x, ' and ', y)
+				    </code></pre>
+          </section>
+        </section>
+
+        <section>
+          <h2>Tuples</h2>
+          <pre class="python"><code class="hljs" data-trim contenteditable>
+          traits = ('Smart', 'Very Smart', 'Extremely Smart')
+          print(traits[0])
+          for trait in traits:
+            print(trait)
+          </code></pre>
+          <p>
+            Ordered and unchangeable
+          </p>
+        </section>
+
+        <section>
+          <h2>In</h2>
+          <pre class="python"><code class="hljs" data-trim contenteditable>
+          traits_tuple = ('Smart', 'Very Smart', 'Extremely Smart')
+          your_trait = input("What's your trait? ") 
+          if your_trait in traits_tuple:
+            print('You are smart!')
+          else:
+            print("Wow! That's a great trait!!!")
+
+          traits_list = list()
+          while True:
+            your_trait = input("What's your trait? ")
+            if your_trait in traits_list:
+              print('Do you have any other traits?')
+            else:
+              print("Wow! That's a great trait!!!")
+              traits_list.append(your_trait)
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Dictionaries</h2>
+          <pre class="python"><code class="hljs" data-trim contenteditable>
+          ages = {
+            'Oliver': 20,
+            'Ben':  15,
+            'Reed': 11,
+            'Isaac': 17
+          }
+          print('Ben' in ages)
+          print(ages.get('Ben'))
+          ages['Tim'] = 30
+          ages['Isaac'] = 18
+          for key, value in ages.items():
+            print(key, ' -> ', value)
+          addresses = dict()
+          addresses['Oliver'] = 'Redacted'
+          </code></pre>
+        </section>
+
+        <section>
+          <section data-background="#6a1520" data-background-transition="zoom">
+            <h3>
+              Challenge: Given an array of integers, find if the array contains
+              any duplicates.
+            </h3>
+            <h4>
+              Bonus Challenge: Given an array of integers, return indices of the
+              two numbers such that they add up to a specific target.
+            </h4>
+          </section>
+          <section data-background="#6a1520">
+            <pre class="python"><code class="hljs" data-trim contenteditable>
+              numbers_str = input('Please input your numbers: ').split()
+
+              # Gets input as int
+              numbers_int = list()
+              for i in numbers_str:
+                numbers_int.append(int(i))
+              
+              for x in numbers_int:
+                for y in numbers_int:
+                  if x == y:
+                    break
+                  elif (x % y == 0) or (y % x == 0):
+                    print(x, ' and ', y)
+				    </code></pre>
+          </section>
+        </section>
       </div>
     </div>
 
