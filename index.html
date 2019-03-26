@@ -561,30 +561,85 @@
         <section>
           <section data-background="#6a1520" data-background-transition="zoom">
             <h3>
-              Challenge: Given an array of integers, find if the array contains
-              any duplicates.
+              Challenge: Given an array, find if the array contains any
+              duplicates
             </h3>
             <h4>
+              <br />
               Bonus Challenge: Given an array of integers, return indices of the
-              two numbers such that they add up to a specific target.
+              two numbers such that they add up to a specific target
             </h4>
           </section>
           <section data-background="#6a1520">
             <pre class="python"><code class="hljs" data-trim contenteditable>
-              numbers_str = input('Please input your numbers: ').split()
+              def containsDuplicates(checking):
+                seen = list()
+                for i in checking:
+                  if i in seen: 
+                    return True
+                  seen.append(i)
+                return False
+            
+              example = [1, 2, 3, 4, 5]
+              print(containsDuplicates(example))
+          	</code></pre>
+          </section>
+        </section>
 
-              # Gets input as int
-              numbers_int = list()
-              for i in numbers_str:
-                numbers_int.append(int(i))
-              
-              for x in numbers_int:
-                for y in numbers_int:
-                  if x == y:
-                    break
-                  elif (x % y == 0) or (y % x == 0):
-                    print(x, ' and ', y)
-				    </code></pre>
+        <section>
+          <h2>Sets</h2>
+          <pre class="python"><code class="hljs" data-trim contenteditable>
+          foods = {'apple', 'orange', 'Kool-Aid'}
+          print(foods)
+          foods.add('grape')
+          print(foods)
+          foods.add('apple')
+          print(foods)
+          </code></pre>
+          <p>No duplicates</p>
+        </section>
+
+        <section>
+          <h2>More Strings</h2>
+          <pre class="python"><code class="hljs" data-trim contenteditable>
+          print('hi' in 'highlight')
+          print(len('Hello'))
+          print('i was lowercase'.upper())
+          print('I WAS UPPERCASE'.lower())
+          s = 'This is a string'
+          print(s[2])
+          print(s[-1])
+          </code></pre>
+          <p>No duplicates</p>
+        </section>
+
+        <section>
+          <section data-background="#6a1520" data-background-transition="zoom">
+            <h3>
+              Challenge: Given two lists, write a function to compute their
+              intersection
+            </h3>
+            <h4>
+              <br />
+              Bonus Challenge: Given a string, find the first non-repeating
+              character in it and return its index
+            </h4>
+          </section>
+          <section data-background="#6a1520">
+            <pre class="python"><code class="hljs" data-trim contenteditable>
+              def getsIntersection(lista, listb):
+                seta = set(lista)
+                setb = set(listb)
+                intersection = set()
+                for i in seta:
+                  if i in setb:
+                    intersection.add(i)
+                return intersection
+
+              a = [1, 2, 2, 1]
+              b = [2, 3]
+              print(getsIntersection(a, b))
+          	</code></pre>
           </section>
         </section>
       </div>
