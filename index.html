@@ -642,6 +642,88 @@
           	</code></pre>
           </section>
         </section>
+
+        <section>
+          <h2>Classes</h2>
+          <pre class="python"><code class="hljs" data-trim contenteditable>
+          class Animal:
+            pass
+          
+          class Person:
+
+            legs = 2                             # Class attribute
+
+            def __init__(self, name):
+              self.name = name                      # Instance attribute
+
+            def talk(self):
+              print('Hi! I am', self.name)
+
+          me = Person('Oliver')
+          print(type(me))
+          print(me.name)
+          print(Person.legs)
+          me.talk()
+          </code></pre>
+          <p>pass is a placeholder</p>
+        </section>
+
+        <section>
+          <h2>Inheritance</h2>
+          <pre class="python"><code class="hljs" data-trim contenteditable>
+          class Animal:
+  
+            def __init__(self, name, legs):
+              self.name = str(name)
+              self.legs = str(legs)
+          
+            def talk(self):
+              print('I am', self.name)
+          
+          class Dog(Animal):
+            def bark(self):
+              print('Bark bark bark')
+
+            # def talk(self):
+            #   print('Bark')
+          
+          sam = Animal('sam', 3)
+          sam.talk()
+          tim = Dog('tim', 4)
+          tim.bark()
+          tim.talk()
+          print(tim.legs)
+         </code></pre>
+        </section>
+
+        <section>
+          <section data-background="#6a1520" data-background-transition="zoom">
+            <h3>
+              Challenge: Create a working Calculator using a Class
+            </h3>
+            <h4>
+              <br />
+              Bonus Challenge: Given two strings, write a method to determine if
+              string one is an anagram of string two.
+            </h4>
+          </section>
+          <section data-background="#6a1520">
+            <pre class="python"><code class="hljs" data-trim contenteditable>
+              def getsIntersection(lista, listb):
+                seta = set(lista)
+                setb = set(listb)
+                intersection = set()
+                for i in seta:
+                  if i in setb:
+                    intersection.add(i)
+                return intersection
+
+              a = [1, 2, 2, 1]
+              b = [2, 3]
+              print(getsIntersection(a, b))
+          	</code></pre>
+          </section>
+        </section>
       </div>
     </div>
 
