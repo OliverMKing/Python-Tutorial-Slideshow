@@ -709,20 +709,67 @@
           </section>
           <section data-background="#6a1520">
             <pre class="python"><code class="hljs" data-trim contenteditable>
-              def getsIntersection(lista, listb):
-                seta = set(lista)
-                setb = set(listb)
-                intersection = set()
-                for i in seta:
-                  if i in setb:
-                    intersection.add(i)
-                return intersection
+              class Calculator:
 
-              a = [1, 2, 2, 1]
-              b = [2, 3]
-              print(getsIntersection(a, b))
-          	</code></pre>
+              def __init__(self, operation, var1, var2):
+                self.operation = operation
+                self.var1 = float(var1)
+                self.var2 = float(var2)
+            
+              def calculate(self):
+                if self.operation == '+':
+                  print(self.add())
+                if self.operation == '-':
+                  print(self.subtract())
+                if self.operation == '*':
+                  print(self.multiply())
+                if self.operation == '/':
+                  print(self.divide())
+                if self.operation == '^':
+                  print(self.exponent())
+            
+            
+              def add(self):
+                return (self.var1 + self.var2)
+            
+              def subtract(self):
+                return (self.var1 - self.var2)
+            
+              def multiply(self):
+                return (self.var1 * self.var2)
+            
+              def divide(self):
+                return (self.var1 / self.var2)
+            
+              def exponent(self):
+                return (self.var1 ** self.var2)
+            
+            while True:
+              params = input('Please enter your calculation: ').split()
+              calculator = Calculator(params[1], params[0], params[2])
+              calculator.calculate()
+            </code></pre>
           </section>
+        </section>
+
+        <section>
+          <h2>What Next?</h2>
+          <ul>
+            <li>Download Python and an IDE</li>
+            <li>
+              Read
+              <a href="http://greenteapress.com/thinkpython2/thinkpython2.pdf"
+                >Think Python</a
+              >
+            </li>
+            <li>
+              Advanced Python (List Comprehensions, Lambdas, Generators, Magic
+              Methods, etc.)
+            </li>
+            <li>Web Frameworks (Django or Flask)</li>
+            <li>Games (Pygame)</li>
+            <li>Data Science (NumPy, Pandas, and Matplotlib)</li>
+          </ul>
         </section>
       </div>
     </div>
