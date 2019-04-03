@@ -753,6 +753,21 @@
         </section>
 
         <section>
+          <h2>Try Except</h2>
+          <pre class="python"><code class="hljs" data-trim contenteditable>
+          number = ''
+          try:
+            number = int(input('Please enter an integer: '))
+          except:
+            print("That's not a good input")
+            number = -1
+          finally:
+            print('Your number is', number)
+         </code></pre>
+          <p>The finally is optional</p>
+        </section>
+
+        <section>
           <h2>What Next?</h2>
           <ul>
             <li>Download Python and an IDE</li>
